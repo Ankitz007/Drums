@@ -4,12 +4,14 @@ for(var i=0; i<buttons.length; i++){
     buttons[i].addEventListener("click", function(){
         var button = this.innerHTML;
         mySound(button);
+        buttonAnimation(button);
     });
 }
 
 // KeyPresses
 document.addEventListener("keypress", function(event){
     mySound(event.key);
+    buttonAnimation(event.key);
 });
 
 // Matching our sounds and keys
@@ -47,4 +49,12 @@ function mySound(key){
         default: console.log();
     }
 
+}
+
+function buttonAnimation(key){
+    var activeButton = document.querySelector("." + key);
+    activeButton.classList.add("pressed");
+    setTimeout( function(){
+        activeButton.classList.remove("pressed");
+    },200);
 }
