@@ -15,31 +15,31 @@ document.addEventListener("keypress", function(event){
 // Matching our sounds and keys
 function mySound(key){
     switch (key) {
-        case 'a':
+        case 'w':
             var audio = new Audio("sounds/tom-1.mp3");
             audio.play();
             break;
-        case 'n':
+        case 'a':
             var audio = new Audio("sounds/tom-2.mp3");
             audio.play();
             break;
-        case 'k':
+        case 's':
             var audio = new Audio("sounds/tom-3.mp3");
             audio.play();
             break;
-        case 'i':
+        case 'd':
             var audio = new Audio("sounds/tom-4.mp3");
             audio.play();
             break;
-        case 't':
+        case 'j':
             var audio = new Audio("sounds/crash.mp3");
             audio.play();
             break;
-        case 'z':
+        case 'k':
             var audio = new Audio("sounds/kick-bass.mp3");
             audio.play();
             break;
-        case '7':
+        case 'l':
             var audio = new Audio("sounds/snare.mp3");
             audio.play();
             break;
