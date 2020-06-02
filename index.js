@@ -1,15 +1,13 @@
 // Button Clicks
-buttons = document.querySelectorAll(".drum");
-for(var i=0; i<buttons.length; i++){
-    buttons[i].addEventListener("click", function(){
-        var button = this.innerHTML;
-        mySound(button);
-        buttonAnimation(button);
-    });
-}
+buttons = $(".drum")
+buttons.click(function(){
+    var button = this.innerHTML;
+    mySound(button);
+    buttonAnimation(button);
+});
 
 // KeyPresses
-document.addEventListener("keypress", function(event){
+$(document).keypress(function(event){
     mySound(event.key);
     buttonAnimation(event.key);
 });
